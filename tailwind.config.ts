@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors
+				screeny: {
+					blue: '#4A7BF7',
+					purple: '#9046FF',
+					green: '#27AE60',
+					dark: '#0D0D0D',
+					light: '#F9FAFB',
+					gray: '#71717A'
 				}
 			},
 			borderRadius: {
@@ -84,11 +94,59 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'fade-up': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'scale-in': {
+					'0%': { opacity: '0', transform: 'scale(0.95)' },
+					'100%': { opacity: '1', transform: 'scale(1)' }
+				},
+				'slide-in-right': {
+					'0%': { transform: 'translateX(100%)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
+				},
+				'blur-in': {
+					'0%': { 
+						opacity: '0',
+						filter: 'blur(10px)'
+					},
+					'100%': { 
+						opacity: '1',
+						filter: 'blur(0)'
+					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'fade-up': 'fade-up 0.7s ease-out',
+				'scale-in': 'scale-in 0.5s ease-out',
+				'slide-in-right': 'slide-in-right 0.5s ease-out',
+				'blur-in': 'blur-in 0.7s ease-out',
+				'float': 'float 6s ease-in-out infinite'
+			},
+			fontFamily: {
+				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				'display': ['SF Pro Display', 'Inter', 'system-ui', 'sans-serif'],
+				'mono': ['SF Mono', 'monospace']
+			},
+			backdropFilter: {
+				'none': 'none',
+				'blur': 'blur(20px)'
+			},
+			screens: {
+				'xs': '475px'
 			}
 		}
 	},
