@@ -8,22 +8,22 @@ const Footer: React.FC = () => {
   
   const footerLinks = {
     product: [
-      { label: "Features", href: "#" },
-      { label: "Pricing", href: "#pricing" },
-      { label: "How It Works", href: "#how-it-works" },
+      { label: "Возможности", href: "#" },
+      { label: "Тарифы", href: "#pricing" },
+      { label: "Как это работает", href: "#how-it-works" },
       { label: "FAQ", href: "#" },
     ],
     company: [
-      { label: "About Us", href: "#" },
-      { label: "Careers", href: "#" },
-      { label: "Blog", href: "#" },
-      { label: "Legal", href: "#" },
+      { label: "О нас", href: "#" },
+      { label: "Карьера", href: "#" },
+      { label: "Блог", href: "#" },
+      { label: "Правовая информация", href: "#" },
     ],
     resources: [
-      { label: "Help Center", href: "#" },
-      { label: "API Documentation", href: "#" },
-      { label: "Status", href: "#" },
-      { label: "Partners", href: "#" },
+      { label: "Центр поддержки", href: "#" },
+      { label: "Документация API", href: "#" },
+      { label: "Статус системы", href: "#" },
+      { label: "Партнеры", href: "#" },
     ],
     social: [
       { label: "Twitter", href: "#", icon: Twitter },
@@ -41,20 +41,20 @@ const Footer: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <span className="px-4 py-2 rounded-full bg-screeny-blue/10 text-screeny-blue text-sm font-medium inline-block mb-4">
-                Get In Touch
+                Связаться с нами
               </span>
-              <h2 className="text-3xl font-bold mb-4">Ready to transform your hiring process?</h2>
+              <h2 className="text-3xl font-bold mb-4">Готовы изменить свой процесс найма?</h2>
               <p className="text-gray-600 mb-6">
-                Have questions about Screeny AI? Our team is here to help you find the perfect solution for your needs.
+                Есть вопросы о Screeny AI? Наша команда поможет вам найти идеальное решение для ваших потребностей.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button className="flex items-center gap-2 rounded-full bg-screeny-blue hover:bg-screeny-blue/90">
                   <Mail className="h-5 w-5" />
-                  Email Us
+                  Написать нам
                 </Button>
                 <Button variant="outline" className="flex items-center gap-2 rounded-full">
                   <MessageSquare className="h-5 w-5" />
-                  Live Chat
+                  Живой чат
                 </Button>
               </div>
             </div>
@@ -63,13 +63,13 @@ const Footer: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                      Name
+                      Имя
                     </label>
                     <input
                       type="text"
                       id="name"
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-screeny-blue/50"
-                      placeholder="Your name"
+                      placeholder="Ваше имя"
                     />
                   </div>
                   <div>
@@ -80,23 +80,23 @@ const Footer: React.FC = () => {
                       type="email"
                       id="email"
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-screeny-blue/50"
-                      placeholder="Your email"
+                      placeholder="Ваш email"
                     />
                   </div>
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Message
+                    Сообщение
                   </label>
                   <textarea
                     id="message"
                     rows={4}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-screeny-blue/50"
-                    placeholder="Your message"
+                    placeholder="Ваше сообщение"
                   ></textarea>
                 </div>
                 <Button className="btn-gradient w-full rounded-full py-6 flex items-center justify-center gap-2">
-                  Send Message
+                  Отправить сообщение
                   <ArrowRight className="h-5 w-5" />
                 </Button>
               </form>
@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
               <span className="text-2xl font-display font-bold gradient-text">Screeny AI</span>
             </div>
             <p className="text-gray-600 mb-6 max-w-xs">
-              Revolutionizing hiring with AI-powered interviews that save time and find the best candidates.
+              Революционизируем процесс найма с помощью видеоинтервью на базе ИИ, экономя время и находя лучших кандидатов.
             </p>
             <div className="flex items-center gap-4">
               {footerLinks.social.map((link) => (
@@ -128,7 +128,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="font-bold text-lg mb-4">Product</h3>
+            <h3 className="font-bold text-lg mb-4">Продукт</h3>
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.label}>
@@ -141,7 +141,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="font-bold text-lg mb-4">Company</h3>
+            <h3 className="font-bold text-lg mb-4">Компания</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
@@ -154,7 +154,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="font-bold text-lg mb-4">Resources</h3>
+            <h3 className="font-bold text-lg mb-4">Ресурсы</h3>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.label}>
@@ -170,7 +170,7 @@ const Footer: React.FC = () => {
         {/* Copyright */}
         <div className="pt-8 border-t border-gray-100 text-center">
           <p className="text-gray-600 text-sm">
-            © {currentYear} Screeny AI. All rights reserved.
+            © {currentYear} Screeny AI. Все права защищены.
           </p>
         </div>
       </div>

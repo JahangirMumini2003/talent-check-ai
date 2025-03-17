@@ -2,24 +2,24 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Transition from "@/components/ui/Transition";
-import { MessageCircle, Mic, BarChart } from "lucide-react";
+import { MessageCircle, Video, BarChart } from "lucide-react";
 
 const ServiceOverview: React.FC = () => {
   const features = [
     {
-      icon: <Mic className="h-10 w-10 text-screeny-blue" />,
-      title: "AI Asks Questions",
-      description: "Our AI conducts interviews using your custom questions tailored to each role."
+      icon: <Video className="h-10 w-10 text-screeny-blue" />,
+      title: "ИИ задает вопросы через видео",
+      description: "Наш ИИ проводит собеседования по видеосвязи, используя специальные вопросы для каждой роли."
     },
     {
       icon: <MessageCircle className="h-10 w-10 text-screeny-purple" />,
-      title: "AI Answers Candidates",
-      description: "Candidates can ask questions about the role or company, and our AI provides accurate responses."
+      title: "ИИ отвечает кандидатам через видео",
+      description: "Кандидаты могут задавать вопросы о должности или компании, и наш ИИ предоставляет точные ответы."
     },
     {
       icon: <BarChart className="h-10 w-10 text-screeny-green" />,
-      title: "Detailed Ranking",
-      description: "Receive a comprehensive report with candidates ranked from best to worst match."
+      title: "Подробный рейтинг кандидатов",
+      description: "Получите комплексный отчет с ранжированием кандидатов от наиболее до наименее подходящих."
     }
   ];
 
@@ -29,19 +29,19 @@ const ServiceOverview: React.FC = () => {
         <div className="text-center mb-16">
           <Transition animation="fade-up">
             <span className="px-4 py-2 rounded-full bg-screeny-blue/10 text-screeny-blue text-sm font-medium inline-block mb-4">
-              What is Screeny AI
+              Что такое Screeny AI
             </span>
           </Transition>
           
           <Transition animation="fade-up" delay={100}>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Screeny AI — Your Virtual <span className="gradient-text">Recruiter</span>
+              Screeny AI — ваш <span className="gradient-text">виртуальный рекрутер</span>
             </h2>
           </Transition>
           
           <Transition animation="fade-up" delay={200}>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Screeny is an AI-powered service that takes over initial interviews. It asks candidates questions, answers their inquiries, and provides a detailed report for each participant. After the interview, you get a ranked list of candidates from best to worst, so you can focus on the most suitable ones.
+              Screeny — это сервис на базе искусственного интеллекта, который проводит первичные собеседования в видеоформате. Он задает вопросы кандидатам через видео, отвечает на их вопросы в реальном времени и формирует подробный отчет по каждому участнику. После интервью вы получаете список кандидатов, ранжированный от лучшего к худшему.
             </p>
           </Transition>
         </div>
@@ -70,7 +70,7 @@ const ServiceOverview: React.FC = () => {
             className="btn-gradient rounded-full px-8 py-6 text-lg mx-auto"
             asChild
           >
-            <a href="#how-it-works">Learn How It Works</a>
+            <a href="#how-it-works">Узнать, как это работает</a>
           </Button>
         </Transition>
       </div>

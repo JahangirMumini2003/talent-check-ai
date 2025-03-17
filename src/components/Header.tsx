@@ -26,10 +26,10 @@ const Header: React.FC = () => {
   };
 
   const navItems = [
-    { label: "Home", href: "#" },
-    { label: "How it works", href: "#how-it-works" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "Contact", href: "#contact" },
+    { label: "Главная", href: "#" },
+    { label: "Как это работает", href: "#how-it-works" },
+    { label: "Тарифы", href: "#pricing" },
+    { label: "Контакты", href: "#contact" },
   ];
 
   return (
@@ -62,7 +62,7 @@ const Header: React.FC = () => {
             </a>
           ))}
           <Button className="btn-gradient px-6 py-2 rounded-full">
-            Try For Free
+            Попробовать бесплатно
           </Button>
         </nav>
 
@@ -70,7 +70,7 @@ const Header: React.FC = () => {
         <button
           className="md:hidden z-10 p-2"
           onClick={toggleMobileMenu}
-          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-label={mobileMenuOpen ? "Закрыть меню" : "Открыть меню"}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -97,7 +97,7 @@ const Header: React.FC = () => {
               className="btn-gradient px-6 py-2 rounded-full mt-4"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Try For Free
+              Попробовать бесплатно
             </Button>
           </nav>
         </div>

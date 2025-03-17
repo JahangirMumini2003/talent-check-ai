@@ -2,7 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Transition from "@/components/ui/Transition";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Video } from "lucide-react";
 
 const HeroSection: React.FC = () => {
   return (
@@ -19,30 +19,30 @@ const HeroSection: React.FC = () => {
           <div className="flex flex-col space-y-8">
             <Transition animation="fade-up" delay={100}>
               <span className="px-4 py-2 rounded-full bg-screeny-purple/10 text-screeny-purple text-sm font-medium inline-block mb-4">
-                AI-Powered Recruiting Assistant
+                Видео-интервью с Искусственным Интеллектом
               </span>
             </Transition>
 
             <Transition animation="fade-up" delay={200}>
               <h1 className="text-4xl xs:text-5xl md:text-6xl font-bold leading-tight">
-                Stop Wasting Time on <span className="gradient-text">First Rounds</span> — We'll Handle It for You!
+                Больше не тратьте время на <span className="gradient-text">первый раунд</span> — мы сделаем это за вас!
               </h1>
             </Transition>
 
             <Transition animation="fade-up" delay={300}>
               <p className="text-lg text-gray-600 max-w-lg">
-                Screeny AI is your smart hiring assistant. Save time and find the best candidates faster with our AI-powered interview platform.
+                Screeny AI — ваш умный помощник в подборе кандидатов. Экономьте время и находите лучших сотрудников быстрее.
               </p>
             </Transition>
 
             <Transition animation="fade-up" delay={400}>
               <div className="flex flex-col xs:flex-row gap-4">
                 <Button className="btn-gradient rounded-full px-8 py-6 text-lg">
-                  Try For Free
+                  Попробовать бесплатно
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button variant="outline" className="rounded-full px-8 py-6 text-lg border-gray-300 hover:bg-gray-50">
-                  Watch Demo
+                  Смотреть демо
                 </Button>
               </div>
             </Transition>
@@ -60,7 +60,7 @@ const HeroSection: React.FC = () => {
                   ))}
                 </div>
                 <div className="text-sm text-gray-600">
-                  <span className="font-semibold">250+</span> companies trust Screeny AI
+                  <span className="font-semibold">250+</span> компаний доверяют Screeny AI
                 </div>
               </div>
             </Transition>
@@ -75,47 +75,67 @@ const HeroSection: React.FC = () => {
             <div className="relative w-full aspect-square max-w-lg">
               <div className="absolute inset-0 bg-gradient-to-br from-screeny-blue/20 to-screeny-purple/20 rounded-3xl transform rotate-3 animate-float" />
               <div className="absolute inset-0 glassmorphism rounded-3xl -rotate-3 backdrop-blur-sm overflow-hidden flex items-center justify-center">
-                {/* Interactive illustration showing the AI interview process */}
+                {/* Interactive illustration showing the AI video interview process */}
                 <div className="w-[90%] h-[90%] rounded-2xl overflow-hidden bg-white/60 p-5 flex flex-col">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-3 h-3 rounded-full bg-red-400" />
                     <div className="w-3 h-3 rounded-full bg-yellow-400" />
                     <div className="w-3 h-3 rounded-full bg-green-400" />
-                    <div className="text-xs text-gray-500 ml-2">Screeny AI Interview</div>
+                    <div className="text-xs text-gray-500 ml-2">Видео-интервью Screeny AI</div>
                   </div>
                   
-                  <div className="flex-1 flex flex-col">
-                    <div className="flex gap-4 mb-4">
-                      <div className="w-8 h-8 rounded-full bg-gray-200 flex-shrink-0" />
-                      <div className="bg-gray-100 rounded-2xl rounded-tl-none px-4 py-2 text-sm text-gray-700 max-w-[80%]">
-                        Tell me about your experience with React.js
+                  <div className="flex-1 flex flex-col bg-gray-50 rounded-lg overflow-hidden">
+                    <div className="flex-1 grid grid-cols-2 gap-2 p-2">
+                      <div className="bg-black rounded-lg flex items-center justify-center overflow-hidden">
+                        {/* AI avatar section */}
+                        <div className="relative w-full h-full">
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="w-20 h-20 rounded-full bg-screeny-blue/30 flex items-center justify-center">
+                              <Video className="h-8 w-8 text-screeny-blue" />
+                            </div>
+                          </div>
+                          <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-xs p-2">
+                            Screeny AI
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-black rounded-lg flex items-center justify-center overflow-hidden">
+                        {/* Candidate section */}
+                        <div className="relative w-full h-full">
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="w-20 h-20 rounded-full bg-gray-400/30 flex items-center justify-center">
+                              <Video className="h-8 w-8 text-white/70" />
+                            </div>
+                          </div>
+                          <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-xs p-2">
+                            Кандидат
+                          </div>
+                        </div>
                       </div>
                     </div>
                     
-                    <div className="flex gap-4 flex-row-reverse mb-4">
-                      <div className="w-8 h-8 rounded-full bg-screeny-blue/20 flex-shrink-0" />
-                      <div className="bg-screeny-blue/10 rounded-2xl rounded-tr-none px-4 py-2 text-sm text-gray-700 max-w-[80%]">
-                        I have 3 years of experience working with React, building responsive web applications...
+                    <div className="p-3 border-t border-gray-200">
+                      <div className="mb-2 text-xs text-gray-500">Текущий вопрос:</div>
+                      <div className="text-sm font-medium">
+                        Расскажите о вашем опыте работы с React.js
                       </div>
                     </div>
                     
-                    <div className="flex gap-4 mb-4">
-                      <div className="w-8 h-8 rounded-full bg-gray-200 flex-shrink-0" />
-                      <div className="bg-gray-100 rounded-2xl rounded-tl-none px-4 py-2 text-sm text-gray-700 max-w-[80%]">
-                        What do you know about our company?
+                    <div className="mt-auto p-3 flex items-center justify-between border-t border-gray-200">
+                      <div className="flex space-x-2">
+                        <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+                          <div className="w-3 h-3 bg-red-500 rounded-full" />
+                        </div>
+                        <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+                          <div className="i-lucide-mic-off w-4 h-4 text-gray-600" />
+                        </div>
+                      </div>
+                      <div className="flex space-x-2">
+                        <div className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">
+                          Осталось: 5:30
+                        </div>
                       </div>
                     </div>
-                    
-                    <div className="flex gap-4 flex-row-reverse">
-                      <div className="w-8 h-8 rounded-full bg-screeny-blue/20 flex-shrink-0" />
-                      <div className="bg-screeny-blue/10 rounded-2xl rounded-tr-none px-4 py-2 text-sm text-gray-700 max-w-[80%]">
-                        I've researched that your company specializes in...
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="h-10 bg-gray-100 rounded-full flex items-center px-4 mt-4">
-                    <div className="text-xs text-gray-400">Type your answer...</div>
                   </div>
                 </div>
               </div>

@@ -7,48 +7,48 @@ import { Check } from "lucide-react";
 const PricingSection: React.FC = () => {
   const plans = [
     {
-      name: "Free Plan",
-      description: "Perfect for trying out Screeny AI",
+      name: "Бесплатный тариф",
+      description: "Идеально для знакомства со Screeny AI",
       price: "0",
       features: [
-        "1 free interview",
-        "Basic candidate ranking",
-        "Email support",
-        "Results valid for 14 days"
+        "1 бесплатное интервью",
+        "Базовый рейтинг кандидатов",
+        "Поддержка по email",
+        "Результаты действительны 14 дней"
       ],
-      cta: "Get Started for Free",
+      cta: "Начать бесплатно",
       href: "#",
       highlighted: false
     },
     {
-      name: "Basic Plan",
-      description: "Perfect for small teams and startups",
+      name: "Базовый тариф",
+      description: "Идеально для малых команд и стартапов",
       price: "10",
-      unit: "for 10 interviews",
+      unit: "за 10 собеседований",
       features: [
-        "10 interviews",
-        "Advanced candidate ranking",
-        "Priority email support",
-        "Results stored for 30 days",
-        "Custom interview questions"
+        "10 видео-собеседований",
+        "Расширенный рейтинг кандидатов",
+        "Приоритетная поддержка по email",
+        "Результаты хранятся 30 дней",
+        "Настраиваемые вопросы для интервью"
       ],
-      cta: "Buy for $10",
+      cta: "Купить за 10$",
       href: "#",
       highlighted: true
     },
     {
-      name: "Custom Plan",
-      description: "For businesses with specific needs",
-      price: "Custom",
+      name: "Индивидуальный тариф",
+      description: "Для бизнеса с особыми требованиями",
+      price: "Индивидуально",
       features: [
-        "Unlimited interviews",
-        "Custom integration options",
-        "Dedicated account manager",
-        "Advanced analytics",
-        "Results stored for 90 days",
-        "White-labeling options"
+        "Неограниченное количество интервью",
+        "Варианты индивидуальной интеграции",
+        "Персональный менеджер",
+        "Расширенная аналитика",
+        "Результаты хранятся 90 дней",
+        "Возможности брендирования"
       ],
-      cta: "Contact Us",
+      cta: "Связаться с нами",
       href: "#contact",
       highlighted: false
     }
@@ -60,19 +60,19 @@ const PricingSection: React.FC = () => {
         <div className="text-center mb-16">
           <Transition animation="fade-up">
             <span className="px-4 py-2 rounded-full bg-screeny-purple/10 text-screeny-purple text-sm font-medium inline-block mb-4">
-              Pricing
+              Тарифы
             </span>
           </Transition>
           
           <Transition animation="fade-up" delay={100}>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Simple and <span className="gradient-text">Affordable</span> Pricing
+              Простые и <span className="gradient-text">доступные</span> тарифы
             </h2>
           </Transition>
           
           <Transition animation="fade-up" delay={200}>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Choose the plan that's right for you. Start for free and upgrade as your needs grow.
+              Выберите план, который подходит именно вам. Начните бесплатно и обновите по мере роста ваших потребностей.
             </p>
           </Transition>
         </div>
@@ -94,7 +94,7 @@ const PricingSection: React.FC = () => {
               >
                 {plan.highlighted && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-1 bg-screeny-blue text-white text-sm font-medium rounded-full">
-                    Most Popular
+                    Популярный выбор
                   </div>
                 )}
                 
@@ -134,17 +134,17 @@ const PricingSection: React.FC = () => {
 
         <Transition animation="fade-up" delay={600} className="mt-16 text-center">
           <div className="glassmorphism p-8 rounded-2xl max-w-3xl mx-auto">
-            <h3 className="text-xl font-bold mb-4">Need a custom solution?</h3>
+            <h3 className="text-xl font-bold mb-4">Нужно индивидуальное решение?</h3>
             <p className="text-gray-600 mb-6">
-              We offer tailored packages for companies with specific requirements.
-              Get in touch to discuss how we can help you scale your hiring process.
+              Мы предлагаем индивидуальные пакеты для компаний с особыми требованиями.
+              Свяжитесь с нами, чтобы обсудить, как мы можем помочь вам масштабировать процесс найма.
             </p>
             <Button
               variant="outline"
               className="rounded-full border-gray-300 hover:bg-gray-50"
               asChild
             >
-              <a href="#contact">Contact our sales team</a>
+              <a href="#contact">Связаться с нашей командой продаж</a>
             </Button>
           </div>
         </Transition>

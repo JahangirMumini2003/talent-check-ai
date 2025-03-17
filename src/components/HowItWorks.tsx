@@ -8,40 +8,41 @@ import {
   Link as LinkIcon, 
   User, 
   FileBarChart, 
-  List 
+  List,
+  Video
 } from "lucide-react";
 
 const HowItWorks: React.FC = () => {
   const steps = [
     {
       icon: <FileText className="h-8 w-8" />,
-      title: "Create a Vacancy",
-      description: "Specify the job title, description, and requirements for the position."
+      title: "Создайте вакансию",
+      description: "Укажите название, описание и требования к должности."
     },
     {
       icon: <List className="h-8 w-8" />,
-      title: "Set Up Questions",
-      description: "Add your list of interview questions for candidates to answer."
+      title: "Настройте вопросы",
+      description: "Добавьте список вопросов для собеседования с кандидатами."
     },
     {
       icon: <HelpCircle className="h-8 w-8" />,
-      title: "Add Info for AI",
-      description: "Upload company details so the AI can answer candidates' questions accurately."
+      title: "Добавьте информацию для ИИ",
+      description: "Загрузите данные о компании, чтобы ИИ мог точно отвечать на вопросы кандидатов."
     },
     {
       icon: <LinkIcon className="h-8 w-8" />,
-      title: "Generate a Link",
-      description: "Get a unique link for the vacancy to include in your job postings."
+      title: "Сгенерируйте ссылку",
+      description: "Получите уникальную ссылку для вакансии и включите ее в объявление о работе."
     },
     {
-      icon: <User className="h-8 w-8" />,
-      title: "Candidate Takes the Interview",
-      description: "Candidates follow the link, answer AI questions, and ask their own."
+      icon: <Video className="h-8 w-8" />,
+      title: "Кандидат проходит видео-интервью",
+      description: "Кандидаты переходят по ссылке, отвечают на вопросы ИИ по видео и задают свои."
     },
     {
       icon: <FileBarChart className="h-8 w-8" />,
-      title: "Receive a Report",
-      description: "Get a detailed performance report with candidates ranked from best to worst."
+      title: "Получите отчет",
+      description: "Получите подробный отчет с ранжированием кандидатов от лучшего к худшему."
     }
   ];
 
@@ -57,20 +58,19 @@ const HowItWorks: React.FC = () => {
         <div className="text-center mb-16">
           <Transition animation="fade-up">
             <span className="px-4 py-2 rounded-full bg-screeny-green/10 text-screeny-green text-sm font-medium inline-block mb-4">
-              Step-By-Step Process
+              Пошаговый процесс
             </span>
           </Transition>
           
           <Transition animation="fade-up" delay={100}>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              How Screeny AI <span className="gradient-text">Simplifies Hiring</span>
+              Как Screeny AI <span className="gradient-text">упрощает подбор персонала</span>
             </h2>
           </Transition>
           
           <Transition animation="fade-up" delay={200}>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our streamlined process makes it easy to automate your initial interviews,
-              saving you valuable time and helping you identify the best candidates efficiently.
+              Наш упрощенный процесс позволяет автоматизировать первичные собеседования, экономя ваше время и помогая эффективно выявлять лучших кандидатов.
             </p>
           </Transition>
         </div>
@@ -104,7 +104,7 @@ const HowItWorks: React.FC = () => {
             className="btn-gradient rounded-full px-8 py-6 text-lg mx-auto"
             asChild
           >
-            <a href="#pricing">Create Your First Vacancy</a>
+            <a href="#pricing">Создать первую вакансию</a>
           </Button>
         </Transition>
       </div>
