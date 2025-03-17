@@ -1,10 +1,8 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Instagram, Twitter, Linkedin, Facebook } from "lucide-react";
+import { Instagram, Twitter, Linkedin, Facebook } from "lucide-react";
 import BrandTelegram from "@/components/ui/BrandTelegram";
-
-const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfyQpsL29voVoijGZQBJ4ZawBchdhaMlVb4lDBbLEiS_-KvdA/viewform";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -38,7 +36,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-white pt-20 pb-12 px-6 md:px-12" id="contact">
+    <footer className="bg-white pt-20 pb-12 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Footer Links */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12 pt-8 border-t border-gray-100">
