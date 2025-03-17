@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import Transition from "@/components/ui/Transition";
 import { MessageCircle, Video, BarChart } from "lucide-react";
 
+const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfyQpsL29voVoijGZQBJ4ZawBchdhaMlVb4lDBbLEiS_-KvdA/viewform";
+
 const ServiceOverview: React.FC = () => {
   const features = [
     {
@@ -70,7 +72,7 @@ const ServiceOverview: React.FC = () => {
             className="btn-gradient rounded-full px-8 py-6 text-lg mx-auto"
             asChild
           >
-            <a href="#how-it-works">Узнать, как это работает</a>
+            <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Узнать, как это работает</a>
           </Button>
         </Transition>
       </div>

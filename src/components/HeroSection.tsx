@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import Transition from "@/components/ui/Transition";
 import { ArrowRight, Video } from "lucide-react";
 
+const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfyQpsL29voVoijGZQBJ4ZawBchdhaMlVb4lDBbLEiS_-KvdA/viewform";
+
 const HeroSection: React.FC = () => {
   return (
     <section className="relative min-h-screen flex flex-col justify-center pt-24 pb-20 px-6 md:px-12 overflow-hidden">
@@ -37,12 +39,23 @@ const HeroSection: React.FC = () => {
 
             <Transition animation="fade-up" delay={400}>
               <div className="flex flex-col xs:flex-row gap-4">
-                <Button className="btn-gradient rounded-full px-8 py-6 text-lg">
-                  Попробовать бесплатно
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Button 
+                  className="btn-gradient rounded-full px-8 py-6 text-lg"
+                  asChild
+                >
+                  <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
+                    Попробовать бесплатно
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
                 </Button>
-                <Button variant="outline" className="rounded-full px-8 py-6 text-lg border-gray-300 hover:bg-gray-50">
-                  Смотреть демо
+                <Button 
+                  variant="outline" 
+                  className="rounded-full px-8 py-6 text-lg border-gray-300 hover:bg-gray-50"
+                  asChild
+                >
+                  <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
+                    Смотреть демо
+                  </a>
                 </Button>
               </div>
             </Transition>

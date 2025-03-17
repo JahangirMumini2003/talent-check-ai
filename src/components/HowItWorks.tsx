@@ -12,6 +12,8 @@ import {
   Video
 } from "lucide-react";
 
+const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfyQpsL29voVoijGZQBJ4ZawBchdhaMlVb4lDBbLEiS_-KvdA/viewform";
+
 const HowItWorks: React.FC = () => {
   const steps = [
     {
@@ -104,7 +106,7 @@ const HowItWorks: React.FC = () => {
             className="btn-gradient rounded-full px-8 py-6 text-lg mx-auto"
             asChild
           >
-            <a href="#pricing">Создать первую вакансию</a>
+            <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Создать первую вакансию</a>
           </Button>
         </Transition>
       </div>

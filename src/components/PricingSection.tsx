@@ -3,6 +3,10 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Transition from "@/components/ui/Transition";
 import { Check } from "lucide-react";
+import BrandTelegram from "./ui/BrandTelegram";
+
+const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfyQpsL29voVoijGZQBJ4ZawBchdhaMlVb4lDBbLEiS_-KvdA/viewform";
+const TELEGRAM_CONTACT = "@jahangirmumini";
 
 const PricingSection: React.FC = () => {
   const plans = [
@@ -17,7 +21,7 @@ const PricingSection: React.FC = () => {
         "Результаты действительны 14 дней"
       ],
       cta: "Начать бесплатно",
-      href: "#",
+      href: FORM_URL,
       highlighted: false
     },
     {
@@ -33,7 +37,7 @@ const PricingSection: React.FC = () => {
         "Настраиваемые вопросы для интервью"
       ],
       cta: "Купить за 10$",
-      href: "#",
+      href: FORM_URL,
       highlighted: true
     },
     {
@@ -49,7 +53,7 @@ const PricingSection: React.FC = () => {
         "Возможности брендирования"
       ],
       cta: "Связаться с нами",
-      href: "#contact",
+      href: FORM_URL,
       highlighted: false
     }
   ];
@@ -125,7 +129,7 @@ const PricingSection: React.FC = () => {
                   }
                   asChild
                 >
-                  <a href={plan.href}>{plan.cta}</a>
+                  <a href={plan.href} target="_blank" rel="noopener noreferrer">{plan.cta}</a>
                 </Button>
               </div>
             </Transition>
@@ -135,16 +139,24 @@ const PricingSection: React.FC = () => {
         <Transition animation="fade-up" delay={600} className="mt-16 text-center">
           <div className="glassmorphism p-8 rounded-2xl max-w-3xl mx-auto">
             <h3 className="text-xl font-bold mb-4">Нужно индивидуальное решение?</h3>
-            <p className="text-gray-600 mb-6">
-              Мы предлагаем индивидуальные пакеты для компаний с особыми требованиями.
-              Свяжитесь с нами, чтобы обсудить, как мы можем помочь вам масштабировать процесс найма.
+            <p className="text-gray-600 mb-6 flex items-center justify-center gap-2">
+              Нужны индивидуальные условия? Свяжитесь с нами в Telegram: 
+              <a 
+                href={`https://t.me/${TELEGRAM_CONTACT.substring(1)}`} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-screeny-blue hover:underline"
+              >
+                <BrandTelegram className="h-5 w-5 mr-1" />
+                {TELEGRAM_CONTACT}
+              </a>
             </p>
             <Button
               variant="outline"
               className="rounded-full border-gray-300 hover:bg-gray-50"
               asChild
             >
-              <a href="#contact">Связаться с нашей командой продаж</a>
+              <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Связаться с нами</a>
             </Button>
           </div>
         </Transition>

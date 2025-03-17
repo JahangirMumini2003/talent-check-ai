@@ -4,6 +4,8 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
+const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfyQpsL29voVoijGZQBJ4ZawBchdhaMlVb4lDBbLEiS_-KvdA/viewform";
+
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,7 +31,6 @@ const Header: React.FC = () => {
     { label: "Главная", href: "#" },
     { label: "Как это работает", href: "#how-it-works" },
     { label: "Тарифы", href: "#pricing" },
-    { label: "Контакты", href: "#contact" },
   ];
 
   return (
@@ -61,8 +62,13 @@ const Header: React.FC = () => {
               {item.label}
             </a>
           ))}
-          <Button className="btn-gradient px-6 py-2 rounded-full">
-            Попробовать бесплатно
+          <Button 
+            className="btn-gradient px-6 py-2 rounded-full"
+            asChild
+          >
+            <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
+              Попробовать бесплатно
+            </a>
           </Button>
         </nav>
 
@@ -96,8 +102,11 @@ const Header: React.FC = () => {
             <Button 
               className="btn-gradient px-6 py-2 rounded-full mt-4"
               onClick={() => setMobileMenuOpen(false)}
+              asChild
             >
-              Попробовать бесплатно
+              <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
+                Попробовать бесплатно
+              </a>
             </Button>
           </nav>
         </div>
